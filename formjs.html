@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>University Finder</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+		
+		<link rel="stylesheet"type="text/css"href="decss.css">
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	</head>
+	<body>
+		<div class="header">
+		<ul>
+			<li><a href="de.html">SecureUni</a></li>
+			<li><a href="formjs.html">Find your University</a></li>
+			<li class="dropdown"><a class="dropbtn">Top Universities</a>
+				<div class="dropdown-content">
+					<a href="us.html">United States of America</a>
+					<a href="uk.html">United Kingdom</a>
+					<a href="canada.html">Canada</a>
+					<a href="germany.html">Germany</a>
+					
+				</div>
+			</li>
+		</ul>
+		</div>
+		<br />
+		<div class="container">
+			<h2 align="center">University Finder</h2>
+			<br />
+			<div class="col-md-6" style="margin:0 auto; float:none;">
+				<form method="link" action="newfile.html">
+					<h3 align="center">University Finder</h3>
+					<br />
+					<p>Get an elaborate list of Ambitious, Realistic and Safe Universities for Masters in the US based on your Profiles, Field of Interest & GRE Score using our unique GRAD SCHOOL FINDER.</p>
+					<p style="font-size:20px;">Please fill in your details.</p>
+					<br />
+					<!--<?php echo $error; ?>-->
+					<div class="form-group">
+						<label>Enter GRE Score</label>
+						<input type="text" name="v" placeholder="Enter GRE Score" class="form-control"/>
+					</div>
+					<div class="form-group">
+						<label>Enter CGPA (1-10)</label>
+						<input type="text" name="w" class="form-control" placeholder="Enter CGPA"/>
+					</div>
+					<div class="form-group">
+						<label>Enter SOP Rating (1-5)</label>
+						<input type="text" name="x" class="form-control" placeholder="Enter SOP"/>
+					</div>
+					<div class="form-group">
+						<label>Enter Experience in years (0-10)</label>
+						<input type="text" name="y" class="form-control" placeholder="Enter Experience"></textarea>
+					</div>
+					<div class="form-group">
+						<label>Enter Budget in Dollars</label>
+						<input type="text" name="z" class="form-control" placeholder="Enter Budget"></textarea>
+					</div>
+                      <div class="form-group">
+						<label>Enter Area of Interest (USA, UK, Canada, Germany)</label>
+						<input type="text" name="p" class="form-control" placeholder="Enter Area"></textarea>
+					</div>
+					<div class="form-group" align="center">
+						<input type="submit" name="submit" class="sub" value="Predict"/>
+					</div>
+				</form>
+				
+				
+				
+			</div>
+			</div>
+	</body>
+	<script type="text/javascript">
+	
+	a=(1*-3.064)+(v*-0.068)+(w*-0.41)+(x*5.307)+(y*2.742)+(z*0.0006);
+	b=(1*-355.44)+(v*0.77)+(w*8.95)+(x*3.86)+(y*2.89)+(z*0.0031);
+	c=(1*-358.90)+(v*0.468)+(w*12.093)+(x*9.54)+(y*2.042)+(z*0.00136);
+	d=(1*-1211.77)+(v*0.71)+(w*20.99)+(x*142.39)+(y*7.21)+(z*0.001);
+	if (p=="USA"){
+		var k=["Stanford","MIT","CMU","Georgia Tech","USC","Maryland","Rutgers","University of California Irvine","NYU","Syracuse","University of Miami","University of Connecticut"];
+	}
+	else if (p=="UK"){
+		var k=["Cambridge","Oxford","KCL","Edinburg","Manchester University","Glasgow University","Nottingham University","Queen Mary University","Lancaster University","University of York","St. Andrews University","Leeds University"];
+	}
+	else if (p=="Canada"){
+		var k=["University of British Columbia","University of Toronto","University of Alberta","University de Montreal","Waterloo University","McMaster University","Western University","Queens University","Simon Fraser University","University of Ottawa","York University","Ryeuson University"];
+	}
+	else{
+		var k=["TUM","LM University","KIT","Humbaldt University","RWTH","Freie University","Freiburg University","Bonn University","Hamburg University","Stuttgart University","University of Cologne","ULM"];	
+	}
+	
+</script>
+</html>

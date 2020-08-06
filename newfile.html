@@ -1,0 +1,175 @@
+<html><head>
+		<title>University Finder</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+		
+		<link rel="stylesheet"type="text/css"href="decss.css">
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	</head>
+	<body style="color:white; text-align:center; font-size: 15px; font-family: 'Times New Roman'; text-transform:uppercase; " >
+		<div class="header">
+		<ul>
+			<li><a href="de.html">SecureUni</a></li>
+			<li><a href="formjs.html">Find your University</a></li>
+			<li class="dropdown"><a class="dropbtn">Top Universities</a>
+				<div class="dropdown-content">
+					<a href="us.html">United States of America</a>
+					<a href="uk.html">United Kingdom</a>
+					<a href="canada.html">Canada</a>
+					<a href="germany.html">Germany</a>
+					
+				</div>
+			</li>
+		</ul>
+		</div>
+		<pre>
+		
+		
+		
+		
+		</pre>
+<FORM NAME="neww">
+<INPUT TYPE="hidden" NAME="secret">
+</FORM>
+
+<script LANGUAGE="javascript" >
+
+
+var locate = window.location
+document.neww.secret.value = locate
+
+var text = document.neww.secret.value
+
+function delineate(str)
+{
+theleft = str.indexOf("v=") + 2;
+theright = str.indexOf("&w");
+return(str.substring(theleft, theright));
+}
+
+
+function delineate2(str)
+{
+theleft = str.indexOf("w=") + 2;
+theright = str.indexOf("&x");
+return(str.substring(theleft, theright));
+}
+
+
+function delineate3(str)
+{
+theleft = str.indexOf("x=") + 2;
+theright = str.indexOf("&y");
+return(str.substring(theleft, theright));
+}
+
+
+function delineate4(str)
+{
+theleft = str.indexOf("y=") + 2;
+theright = str.indexOf("&z");
+return(str.substring(theleft, theright));
+}
+
+
+function delineate5(str)
+{
+theleft = str.indexOf("z=") + 2;
+theright = str.indexOf("&p");
+return(str.substring(theleft, theright));
+}
+
+
+function delineate6(str)
+{
+theleft = str.indexOf("p=") + 2;
+theright = str.lastIndexOf("&");
+return(str.substring(theleft, theright));
+}
+
+
+v=delineate(text);
+v = parseFloat(v);
+w=delineate2(text);
+w = parseFloat(w);
+x=delineate3(text);
+x = parseFloat(x);
+y=delineate4(text);
+y = parseFloat(y);
+z=delineate5(text);
+z = parseFloat(z);
+p=delineate6(text);
+
+
+
+
+a=(1*-3.064)+(v*-0.068)+(w*-0.41)+(x*5.307)+(y*2.742)+(z*0.0006);
+	b=(1*-355.44)+(v*0.77)+(w*8.95)+(x*3.86)+(y*2.89)+(z*0.00031);
+	c=(1*-358.90)+(v*0.468)+(w*12.093)+(x*9.54)+(y*2.042)+(z*0.00136);
+	d=(1*-1211.77)+(v*0.71)+(w*20.99)+(x*142.39)+(y*7.21)+(z*0.001);
+		a=Math.exp(a)/(Math.exp(a)+1);
+	b=Math.exp(b)/(Math.exp(b)+1);
+	c=Math.exp(c)/(Math.exp(c)+1);
+	d=Math.exp(d)/(Math.exp(d)+1);
+	if(a<0.0001)
+	{	a=0;
+	}
+	if(b<0.0001)
+	{	b=0;
+	}
+	if(c<0.0001)
+	{	c=0;
+	}
+	if(d<0.0001)
+	{	d=0;
+	}
+	a=a*100;
+	a=Math.round( a );
+	
+	b=b*100;
+	b=Math.round( b );
+	
+	c=c*100;
+	c=Math.round( c );
+	
+	d=d*100;
+	d=Math.round( d );
+	
+	if (p=="USA"){
+		var k=["Stanford","MIT","CMU","Georgia Tech","USC","Maryland","Rutgers","University of California Irvine","NYU","Syracuse","University of Miami","University of Connecticut"];
+	}
+	else if (p=="UK"){
+		var k=["Cambridge","Oxford","KCL","Edinburg","Manchester University","Glasgow University","Nottingham University","Queen Mary University","Lancaster University","University of York","St. Andrews University","Leeds University"];
+	}
+	else if (p=="Canada"){
+		var k=["University of British Columbia","University of Toronto","University of Alberta","University de Montreal","Waterloo University","McMaster University","Western University","Queens University","Simon Fraser University","University of Ottawa","York University","Ryeuson University"];
+	}
+	else{
+		var k=["TUM","LM University","KIT","Humbaldt University","RWTH","Freie University","Freiburg University","Bonn University","Hamburg University","Stuttgart University","University of Cologne","ULM"];	
+	}
+
+var str="PROBABILITY OF GETTING INTO THE FOLLOWING UNIVERSITIES ARE: <br>";
+str=str.bold();
+
+
+document.write(str);
+document.write("<br>");
+document.write(k[0]+" - "+d +"%<br><br>");
+document.write(k[1]+" - "+d +"%<br><br>");
+document.write(k[2]+" - "+c +"%<br><br>");
+document.write(k[3]+" - "+c +"%<br><br>");
+document.write(k[4]+" - "+c +"%<br><br>");
+document.write(k[5]+" - "+b +"%<br><br>");
+document.write(k[6]+" - "+b +"%<br><br>");
+document.write(k[7]+" - "+b +"%<br><br>");
+document.write(k[8]+" - "+a +"%<br><br>");
+document.write(k[9]+" - "+a +"%<br><br>");
+document.write(k[10]+" - "+a +"%<br><br>");
+document.write(k[11]+" - "+a +"%<br><br>");
+
+
+
+
+
+</SCRIPT>
+</BODY>
+</html>
